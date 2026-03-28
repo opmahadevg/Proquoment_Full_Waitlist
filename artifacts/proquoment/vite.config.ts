@@ -20,7 +20,7 @@ export default defineConfig({
   },
 
   build: {
-    outDir: "dist",        // 👈 IMPORTANT (Vercel expects this)
+    outDir: "dist",
     emptyOutDir: true,
   },
 
@@ -32,9 +32,5 @@ export default defineConfig({
   preview: {
     port: 3000,
     host: true,
-  },
-});
-    host: "0.0.0.0",
-    allowedHosts: true,
   },
 });
