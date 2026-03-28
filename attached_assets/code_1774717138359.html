@@ -1,0 +1,360 @@
+<!DOCTYPE html><html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Catalog | ProcureDirect Industrial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#e1e0ff",
+              "tertiary-container": "#3f3f51",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#f9f9f9",
+              "on-primary": "#ffffff",
+              "surface-container": "#eeeeee",
+              "on-background": "#1a1c1c",
+              "inverse-primary": "#bfc1ff",
+              "tertiary-fixed": "#e2e0f7",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#454556",
+              "inverse-on-surface": "#f1f1f1",
+              "on-primary-fixed-variant": "#1c18df",
+              "on-secondary-fixed-variant": "#1200ed",
+              "on-secondary-fixed": "#03006d",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#e8e8e8",
+              "surface-tint": "#3c40f5",
+              "on-secondary-container": "#c8c9ff",
+              "surface-dim": "#dadada",
+              "outline-variant": "#c6c4d9",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#2f3131",
+              "on-primary-container": "#a0a4ff",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed": "#1a1a2a",
+              "on-surface": "#1a1c1c",
+              "background": "#f9f9f9",
+              "secondary-fixed-dim": "#bfc1ff",
+              "secondary": "#0f00d9",
+              "on-tertiary-container": "#acaac0",
+              "secondary-container": "#2c2cff",
+              "surface-bright": "#f9f9f9",
+              "tertiary": "#29293a",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed": "#03006d",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "primary-container": "#0f00da",
+              "tertiary-fixed-dim": "#c6c4da",
+              "outline": "#767588",
+              "surface-container-highest": "#e2e2e2",
+              "primary-fixed-dim": "#bfc1ff",
+              "on-tertiary-fixed-variant": "#454557",
+              "surface-container-low": "#f3f3f3",
+              "secondary-fixed": "#e1e0ff",
+              "primary": "#070099"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; color: #1a1c1c; -webkit-font-smoothing: antialiased; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .glass-modal { backdrop-filter: blur(12px); background: rgba(15, 0, 218, 0.04); }
+      .atmos-shadow { box-shadow: 0px 20px 40px rgba(15, 0, 218, 0.04); }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .halftone-texture {
+            background-image: radial-gradient(circle at center, #0f00da 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+      }
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+      }
+      #mobile-menu.active {
+        transform: translateY(0);
+      }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-surface-container">
+<div class="flex justify-between items-center px-6 lg:px-12 py-3 lg:py-4 w-full max-w-[1440px] mx-auto relative z-[60]">
+<div class="flex items-center gap-2 lg:gap-3">
+<img alt="Proquoment Logo" class="h-6 lg:h-8 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uguUXosTUwY8IKEneC9HGTM5q2EtTIbUcfP6AQeeFEnvqbFUeYdT3wMPoo5yhaA3qwm_-rRYNA2oBIP-s_F6G8P02sNzDVgZvRs-Mj6dtsvgN5cftmf2CnByNsW0oacqWiv9mvdOZfIr1RhUtOI7lzlwxIqHtOfvuL1H71Xbl-nJQfrYNp5eJOHA_tWScpimEaxAe098UuRbhtpCmp2cARZP1kzk9TQXv-SQ5FUA-WXJah3CzyBwWm7ti7NLR0XV2p3JXtkPtuAew" style="">
+<span class="text-xl lg:text-2xl font-black tracking-tighter text-[#070099] font-headline" style="">Proquoment</span>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex gap-8 lg:gap-10 items-center">
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#" style="">Platform</a>
+<a class="text-sm lg:text-base font-medium hover:text-primary transition-colors text-[#0f00da] border-b-2 border-[#0f00da] pb-1" href="#" style="">Catalog</a>
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#" style="">Use Cases</a>
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#" style="">Contact</a>
+<button class="bg-[#0f00da] text-white px-5 lg:px-8 py-2 lg:py-2.5 rounded-full text-sm lg:text-base font-bold hover:opacity-90 transition-all active:scale-95" style="">
+                    Join Waitlist</button>
+</div>
+<!-- Mobile Toggle Button -->
+<div class="flex md:hidden items-center">
+<button class="text-on-background focus:outline-none p-2" id="menu-toggle" style="">
+<span class="material-symbols-outlined text-3xl" id="open-icon" style="">menu</span>
+<span class="material-symbols-outlined text-3xl hidden" id="close-icon" style="">close</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="md:hidden fixed inset-x-0 top-0 bg-white shadow-xl pt-20 pb-10 z-[55] flex flex-col items-center gap-6 border-b border-surface-container" id="mobile-menu">
+<a class="text-base font-medium text-on-surface hover:text-primary py-2" href="#" onclick="toggleMenu()" style="">Platform</a>
+<a class="text-base font-medium text-[#0f00da] py-2" href="#" onclick="toggleMenu()" style="">Catalog</a>
+<a class="text-base font-medium text-on-surface hover:text-primary py-2" href="#" onclick="toggleMenu()" style="">Use Cases</a>
+<a class="text-base font-medium text-on-surface hover:text-primary py-2" href="#" onclick="toggleMenu()" style="">Contact</a>
+<button class="bg-[#0f00da] text-white px-10 py-3 rounded-full text-base font-bold hover:opacity-90 transition-all active:scale-95 mt-4" onclick="toggleMenu()" style="">
+        Join Waitlist
+    </button>
+</div>
+</nav>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('open-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+</script>
+<main class="pt-32 max-w-screen-2xl mx-auto px-8">
+<!-- Hero Section -->
+<section class="mb-32">
+<div class="max-w-4xl">
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-[#0f00da] mb-6 block" style="">Industrial Direct-to-Source</span>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter text-on-surface mb-8 leading-[0.95]" style="">
+                    Catalog: Direct from source. <span class="text-slate-300" style="">No middlemen. No markups.</span>
+</h1>
+<p class="text-xl text-slate-500 leading-relaxed max-w-2xl font-medium" style="">
+                    Proquoment helps global buyers to source directly from Indian manufacturers and farmers — the actual people who make and grow the products. No traders, no brokers, no processors in between.
+                </p>
+</div>
+<!-- Secondary Navigation / Filter Chips -->
+<div class="flex flex-wrap gap-3 mt-16">
+<button class="px-6 py-3 bg-[#0f00da] text-white rounded-full text-sm font-bold shadow-lg shadow-[#0f00da]/10" style="">All Domains</button>
+<button class="px-6 py-3 bg-white text-slate-600 rounded-full text-sm font-bold hover:bg-surface-container transition-colors" style="">Manufacturers</button>
+<button class="px-6 py-3 bg-white text-slate-600 rounded-full text-sm font-bold hover:bg-surface-container transition-colors" style="">Farmers &amp; FPOs</button>
+<button class="px-6 py-3 bg-white text-slate-600 rounded-full text-sm font-bold hover:bg-surface-container transition-colors" style="">Artisans</button>
+</div>
+</section>
+<!-- Catalog Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- 1. Agro & Farm -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-lg p-10 flex flex-col justify-between group cursor-pointer transition-all duration-300 hover:atmos-shadow">
+<div class="flex justify-between items-start mb-12">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-[#0f00da] font-bold mb-2 block" style="">Direct from FPOs</span>
+<h3 class="text-3xl font-black tracking-tight text-on-surface" style="">Agro &amp; Farm Products</h3>
+</div>
+<span class="material-symbols-outlined text-4xl text-[#0f00da] opacity-20 group-hover:opacity-100 transition-opacity" data-icon="agriculture" style="">agriculture</span>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<p class="text-slate-500 font-medium" style="">Sourced straight from certified Farmers' Producer Organizations. Spices, pulses, high-grade grains, and seasonal produce.</p>
+<div class="relative rounded-lg overflow-hidden h-48 bg-slate-100">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="vibrant overhead shot of assorted indian spices and grains in organic burlap sacks with natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhit0XMbo1_phlAGYW_DXBn1KEui_nkTd5H6l_5leUKMJUfp3pLsPkz8wMDJR2jZ1M-TxLzVfeyGsXRTqksyPwuWHGNleo4lDquN2HxndCF5YNi0gBS1A6HS1zILgvZdaJ7Dh0m6Yf4y_5DlrIfUh9zCDURCAjgDu3qaCk2JrPVPhDbS0wqVaaeaOm8DO-8zcnQ2YcZnFWDjmez5TG2TnVXoD9i4Y9oXQiDNZHMQ9O5TnVVtmPXt6PNrgXfMjyX96VBOIptzyRjAN8" style="">
+</div>
+</div>
+</div>
+<!-- 2. Textiles -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-10 flex flex-col justify-between group cursor-pointer transition-all hover:atmos-shadow">
+<div class="mb-8">
+<span class="text-[10px] uppercase tracking-widest text-[#0f00da] font-bold mb-2 block" style="">Factory Output</span>
+<h3 class="text-3xl font-black tracking-tight text-on-surface" style="">Textiles &amp; Apparel</h3>
+</div>
+<p class="text-slate-500 font-medium mb-8" style="">Premium fabrics, custom garments, and performance knitwear from vertically integrated units.</p>
+<div class="flex items-center gap-2 text-[#0f00da] font-bold text-sm">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward" style="">arrow_forward</span>
+</div>
+</div>
+<!-- 3. Gems & Jewellery -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-8 group cursor-pointer hover:atmos-shadow transition-all">
+<div class="h-40 bg-slate-100 rounded-lg mb-6 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up of intricate gold jewelry and loose diamonds on a dark velvet surface with dramatic cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXZh79mVeGUgc_pLGg1xp3yfy4aoeC0fG6p0F_vCFED2QhqQ71Afmb9_HGLATU7vjw5kil6Iafd5c-IkqJpw7G8Xbrm1kxaCx2BqXn6knq0Igu6d2QipPJIlI5_pKefpLdLLLW5wfVl4eFlulRmnqh53OODz9gm19lEZPCO8k5xRzvx-8V9WHwAQyBSZz7F-leZJ9IO8GZbYAq9nLjlA0J-fOGJkO_ptyGm-9vc_Uo0xXfZuX3AUENRQ4cROjFyrDGBkSFQAL1TqJ-" style="">
+</div>
+<h3 class="text-xl font-bold mb-2" style="">Gems &amp; Jewellery</h3>
+<p class="text-sm text-slate-500 font-medium" style="">Precision-crafted gold, silver, and diamond pieces directly from manufacturing hubs.</p>
+</div>
+<!-- 4. Engineering -->
+<div class="md:col-span-4 bg-[#0f00da] text-white rounded-lg p-8 group cursor-pointer hover:scale-[1.02] transition-all">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="precision_manufacturing" style="">precision_manufacturing</span>
+<h3 class="text-2xl font-black tracking-tight mb-4" style="">Engineering &amp; Machinery</h3>
+<p class="text-primary-fixed/80 font-medium text-sm leading-relaxed mb-6" style="">Heavy-duty industrial machinery and precision engineering components forged in India's leading tech corridors.</p>
+<div class="w-12 h-1 bg-white/30 rounded-full"></div>
+</div>
+<!-- 5. Chemicals -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-8 group cursor-pointer hover:atmos-shadow transition-all border-l-4 border-[#0f00da]/10">
+<h3 class="text-xl font-bold mb-2" style="">Chemicals &amp; Pharmaceuticals</h3>
+<p class="text-sm text-slate-500 font-medium mb-6" style="">Bulk drugs, high-purity APIs, and specialty industrial chemicals with full lab traceability.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface rounded text-[10px] font-bold text-slate-400" style="">API</span>
+<span class="px-2 py-1 bg-surface rounded text-[10px] font-bold text-slate-400" style="">BATCH TRACED</span>
+</div>
+</div>
+<!-- 6. Leather -->
+<div class="md:col-span-3 bg-surface-container-lowest rounded-lg p-8 group cursor-pointer hover:atmos-shadow transition-all">
+<span class="material-symbols-outlined text-slate-300 mb-4" data-icon="shopping_bag" style="">shopping_bag</span>
+<h3 class="text-lg font-bold mb-2" style="">Leather &amp; Footwear</h3>
+<p class="text-sm text-slate-500 font-medium" style="">Genuine leather shoes and lifestyle accessories from global export houses.</p>
+</div>
+<!-- 7. Marine -->
+<div class="md:col-span-6 bg-surface-container-lowest rounded-lg p-8 flex items-center gap-8 group cursor-pointer hover:atmos-shadow transition-all overflow-hidden relative">
+<div class="flex-1 z-10">
+<h3 class="text-2xl font-black tracking-tight text-on-surface mb-2" style="">Marine &amp; Seafood</h3>
+<p class="text-slate-500 font-medium text-sm" style="">Cold-chain integrated shrimp, fish, and value-added seafood products from coastal fisheries.</p>
+</div>
+<div class="w-1/3 h-full absolute right-0 top-0 overflow-hidden skew-x-[-12deg] translate-x-8">
+<img class="w-full h-full object-cover" data-alt="fresh raw shrimp on ice at a high-end seafood market with blue atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhC-t_9BDKaxOLSFCtkxWCvrR-8q-53xqUyrwZ4c7_dGRTQMgvA9Rfv1muFuMP8s0RG1aGdYcaMpy2lb8fifamQVpxkRp451jsbewGfBcZGCe02Mph2aoDU-aHlqs4V8dXf6_P3y04Pz9obh5eP4ctj-fWomw32QNRVBv7CbMsiZ4Ktc245B8oZGFMQj-oNzNKek5FEcg9mF4ycz0EOT1nUGdaE4qpkrXaOBmqW81i1bmSPKIkTLb_DcDRnW1UWpTsV0DR6SWGK-R-" style="">
+</div>
+</div>
+<!-- 8. Handicrafts -->
+<div class="md:col-span-3 bg-surface-container-lowest rounded-lg p-8 group cursor-pointer hover:atmos-shadow transition-all text-center">
+<div class="w-16 h-16 bg-surface-container-high rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-[#0f00da]" data-icon="brush" style="">brush</span>
+</div>
+<h3 class="text-lg font-bold mb-2" style="">Handicrafts</h3>
+<p class="text-xs text-slate-400 font-bold uppercase tracking-wider" style="">Artisan Clusters</p>
+</div>
+<!-- Row 3: More specialized domains -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-8 flex flex-col justify-between group cursor-pointer hover:atmos-shadow transition-all">
+<h3 class="text-xl font-bold mb-4" style="">Packaged Foods</h3>
+<p class="text-sm text-slate-500 font-medium leading-relaxed" style="">Certified branded food products, snacks, and ready-to-eat solutions for global retail.</p>
+<div class="mt-6 flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-400"></div>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-lowest rounded-lg p-8 group cursor-pointer hover:atmos-shadow transition-all">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold" style="">Minerals &amp; Stones</h3>
+<span class="material-symbols-outlined opacity-20" data-icon="layers" style="">layers</span>
+</div>
+<p class="text-sm text-slate-500 font-medium" style="">Direct quarry access for high-grade Granite, Marble, and industrial minerals.</p>
+</div>
+<div class="md:col-span-4 bg-white/50 border-2 border-[#0f00da]/5 rounded-lg p-8 group cursor-pointer hover:bg-white transition-all">
+<div class="flex items-center gap-2 text-[#0f00da] font-black text-xs uppercase tracking-widest mb-4" style="">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="">star</span> Certified Pure
+                </div>
+<h3 class="text-xl font-bold mb-2" style="">Organic &amp; Natural</h3>
+<p class="text-sm text-slate-500 font-medium" style="">Purity-guaranteed organic spices and wellness products directly from sustainable farms.</p>
+</div>
+<!-- Final Batch (Small Cards) -->
+<div class="md:col-span-3 bg-surface-container-lowest rounded-lg p-6 group cursor-pointer hover:atmos-shadow transition-all">
+<h4 class="font-bold text-on-surface mb-2" style="">Electronics</h4>
+<p class="text-xs text-slate-400 font-medium leading-snug" style="">Electrical components &amp; OEM parts.</p>
+</div>
+<div class="md:col-span-3 bg-surface-container-lowest rounded-lg p-6 group cursor-pointer hover:atmos-shadow transition-all">
+<h4 class="font-bold text-on-surface mb-2" style="">Construction</h4>
+<p class="text-xs text-slate-400 font-medium leading-snug" style="">Industrial steel, tiles, and fixtures.</p>
+</div>
+<div class="md:col-span-3 bg-surface-container-lowest rounded-lg p-6 group cursor-pointer hover:atmos-shadow transition-all">
+<h4 class="font-bold text-on-surface mb-2" style="">Plastics &amp; Rubber</h4>
+<p class="text-xs text-slate-400 font-medium leading-snug" style="">Precision moulded parts &amp; polymers.</p>
+</div>
+<div class="md:col-span-3 bg-surface-container-lowest rounded-lg p-6 group cursor-pointer hover:atmos-shadow transition-all">
+<h4 class="font-bold text-on-surface mb-2" style="">Forest Products</h4>
+<p class="text-xs text-slate-400 font-medium leading-snug" style="">Bamboo and sustainable wood goods.</p>
+</div>
+</section>
+<!-- AI Sourcing Advisor (The "Soul" element) -->
+<section class="mt-32 glass-modal rounded-xl p-12 relative overflow-hidden">
+<div class="max-w-2xl relative z-10">
+<div class="flex items-center gap-2 text-[#0f00da] font-bold mb-4" style="">
+<span class="" style="">✦</span> AI Sourcing Advisor
+                </div>
+<h2 class="text-4xl font-black tracking-tight mb-6" style="">Not sure where to start?</h2>
+<p class="text-slate-600 font-medium mb-8 leading-relaxed" style="">Describe your procurement needs in plain language. Our AI cross-references 15,000+ verified direct-source entities across India to find your perfect match.</p>
+<div class="flex gap-4 p-2 bg-white rounded-full items-center shadow-xl shadow-[#0f00da]/5">
+<input class="flex-1 bg-transparent border-none focus:ring-0 px-6 text-sm font-medium" placeholder="e.g. Need 100MT of Grade A Turmeric from an FPO in Maharashtra..." type="text">
+<button class="bg-[#0f00da] text-white p-3 rounded-full hover:scale-105 transition-transform" style="">
+<span class="material-symbols-outlined" data-icon="send" style="">send</span>
+</button>
+</div>
+</div>
+<!-- Decorative Halftone -->
+<div class="absolute right-[-10%] bottom-[-20%] opacity-5 pointer-events-none">
+<svg height="600" viewBox="0 0 100 100" width="600">
+<circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="1 2" stroke-width="0.5"></circle>
+</svg>
+</div>
+</section>
+</main>
+<!-- Standardized Industrial Footer -->
+<footer class="bg-surface-container-low border-t border-surface-container py-16 lg:py-20 mt-32">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+<div class="lg:col-span-4">
+<div class="flex items-center gap-2 mb-6">
+<img alt="Proquoment Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uguUXosTUwY8IKEneC9HGTM5q2EtTIbUcfP6AQeeFEnvqbFUeYdT3wMPoo5yhaA3qwm_-rRYNA2oBIP-s_F6G8P02sNzDVgZvRs-Mj6dtsvgN5cftmf2CnByNsW0oacqWiv9mvdOZfIr1RhUtOI7lzlwxIqHtOfvuL1H71Xbl-nJQfrYNp5eJOHA_tWScpimEaxAe098UuRbhtpCmp2cARZP1kzk9TQXv-SQ5FUA-WXJah3CzyBwWm7ti7NLR0XV2p3JXtkPtuAew" style="">
+<span class="text-xl font-black tracking-tighter text-[#070099] font-headline" style="">Proquoment</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed max-w-xs mb-8" style="">
+                        Automated global sourcing for the next generation of industrial manufacturing. Built for precision.
+                    </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm" style="">language</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm" style="">share</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-6" style="">Platform</h4>
+<ul class="space-y-4">
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Materials R&amp;D</a></li>
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Supplier Network</a></li>
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Quality Control</a></li>
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Logistics</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-6" style="">Company</h4>
+<ul class="space-y-4">
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Industrial Manifesto</a></li>
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Case Studies</a></li>
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-6" style="">Legal</h4>
+<ul class="space-y-4">
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Privacy Policy</a></li>
+<li class="" style=""><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#" style="">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-surface-container flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs font-semibold text-outline uppercase tracking-widest" style="">© 2026 Proquoment. All rights reserved</p>
+<div class="flex items-center gap-6">
+<span class="text-[10px] font-black tracking-widest uppercase text-primary" style="">Made for the Industrial Legacy</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

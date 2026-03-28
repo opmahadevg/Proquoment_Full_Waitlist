@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .halftone-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23060055' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        .blue-gradient {
+            background: linear-gradient(135deg, #070099 0%, #0f00da 100%);
+        }
+        /* No-Line Rule: Removing standard borders in favor of tonal layering */
+        input, select, .form-card, .status-card, .radio-option {
+            border: none !important;
+        }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23767588'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-100%);
+        }
+        #mobile-menu.active {
+            transform: translateY(0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-container-low": "#f3f3f3",
+                "on-tertiary-fixed": "#400100",
+                "surface-dim": "#dadada",
+                "outline": "#767588",
+                "surface-variant": "#e2e2e2",
+                "tertiary-fixed-dim": "#ffb4a7",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#1a1c1c",
+                "on-error-container": "#93000a",
+                "outline-variant": "#c6c4d9",
+                "surface": "#f9f9f9",
+                "on-secondary-container": "#c8c9ff",
+                "on-secondary": "#ffffff",
+                "on-surface-variant": "#454556",
+                "surface-container": "#eeeeee",
+                "error-container": "#ffdad6",
+                "surface-tint": "#3c40f5",
+                "inverse-primary": "#bfc1ff",
+                "on-tertiary-container": "#ff8c79",
+                "on-secondary-fixed-variant": "#1200ed",
+                "secondary": "#0f00d9",
+                "primary": "#070099",
+                "primary-container": "#0f00da",
+                "background": "#f9f9f9",
+                "primary-fixed": "#e1e0ff",
+                "on-error": "#ffffff",
+                "surface-bright": "#f9f9f9",
+                "primary-fixed-dim": "#bfc1ff",
+                "inverse-surface": "#2f3131",
+                "on-tertiary": "#ffffff",
+                "on-secondary-fixed": "#03006d",
+                "tertiary": "#5c0200",
+                "error": "#ba1a1a",
+                "surface-container-highest": "#e2e2e2",
+                "on-tertiary-fixed-variant": "#900f04",
+                "on-primary-fixed-variant": "#1c18df",
+                "secondary-fixed": "#e1e0ff",
+                "secondary-container": "#2c2cff",
+                "on-surface": "#1a1c1c",
+                "tertiary-fixed": "#ffdad4",
+                "surface-container-high": "#e8e8e8",
+                "inverse-on-surface": "#f1f1f1",
+                "on-primary": "#ffffff",
+                "on-primary-container": "#a0a4ff",
+                "on-primary-fixed": "#03006d",
+                "tertiary-container": "#860500",
+                "secondary-fixed-dim": "#bfc1ff"
+              },
+              fontFamily: {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-background selection:bg-primary-container selection:text-white" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-[100] bg-white/90 backdrop-blur-md border-b border-surface-container">
+<div class="flex justify-between items-center px-6 lg:px-12 py-3 lg:py-4 w-full max-w-[1440px] mx-auto relative z-[60]">
+<div class="flex items-center gap-2 lg:gap-3">
+<img alt="Proquoment Logo" class="h-6 lg:h-8 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uguUXosTUwY8IKEneC9HGTM5q2EtTIbUcfP6AQeeFEnvqbFUeYdT3wMPoo5yhaA3qwm_-rRYNA2oBIP-s_F6G8P02sNzDVgZvRs-Mj6dtsvgN5cftmf2CnByNsW0oacqWiv9mvdOZfIr1RhUtOI7lzlwxIqHtOfvuL1H71Xbl-nJQfrYNp5eJOHA_tWScpimEaxAe098UuRbhtpCmp2cARZP1kzk9TQXv-SQ5FUA-WXJah3CzyBwWm7ti7NLR0XV2p3JXtkPtuAew"/>
+<span class="text-xl lg:text-2xl font-black tracking-tighter text-[#070099] font-headline">Proquoment</span>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center lg:gap-10 ml-auto gap-10">
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#">Platform</a>
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#">Catalog</a>
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#">Use Cases</a>
+<a class="text-sm lg:text-base font-medium text-on-surface hover:text-primary transition-colors" href="#">Contact</a>
+<button class="bg-[#0f00da] text-white px-5 lg:px-8 py-2 lg:py-2.5 rounded-full text-sm lg:text-base font-bold hover:opacity-90 transition-all active:scale-95 ring-2 ring-primary ring-offset-2" style="background-color: #0f00da;">THE WAITLIST</button>
+</div>
+<!-- Mobile Toggle Button -->
+<div class="flex md:hidden items-center">
+<button class="text-on-background focus:outline-none p-2" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl" id="open-icon">menu</span>
+<span class="material-symbols-outlined text-3xl hidden" id="close-icon">close</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div class="md:hidden fixed inset-x-0 top-0 bg-white shadow-xl pt-20 pb-10 z-[55] flex flex-col items-center gap-6 border-b border-surface-container" id="mobile-menu">
+<a class="text-base font-medium text-on-surface hover:text-primary py-2" href="#" onclick="toggleMenu()">Platform</a>
+<a class="text-base font-medium text-on-surface hover:text-primary py-2" href="#" onclick="toggleMenu()">Catalog</a>
+<a class="text-base font-medium text-on-surface hover:text-primary py-2" href="#" onclick="toggleMenu()">Use Cases</a>
+<a class="text-base font-medium text-on-surface hover:text-primary py-2" href="#" onclick="toggleMenu()">Contact</a>
+<button class="bg-[#0f00da] text-white px-10 py-3 rounded-full text-base font-bold hover:opacity-90 transition-all active:scale-95 mt-4" onclick="toggleMenu()" style="background-color: #0f00da;">THE WAITLIST</button>
+</div>
+</nav>
+<main class="pt-24 sm:pt-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8 mb-16 sm:mb-24 lg:mb-32 grid grid-cols-12 gap-8 halftone-texture pb-12 sm:pb-24">
+<div class="col-span-12 lg:col-span-9 text-center lg:text-left">
+<span class="text-primary font-bold tracking-[0.2em] text-[10px] sm:text-[12px] uppercase mb-4 sm:mb-6 block">Industrial Revolution 4.0</span>
+<h1 class="text-[clamp(2.5rem,8vw,8rem)] leading-[0.9] sm:leading-[0.85] font-black tracking-[-0.04em] text-primary mb-8 sm:mb-12">
+                THE NEW ERA OF PRECISION SOURCING
+            </h1>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col items-center lg:items-start text-center lg:text-left">
+<p class="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl">
+                We are building a closed-loop ecosystem for high-precision manufacturing. Proquoment connects elite industrial buyers with verified facilities through an AI-governed protocol.
+            </p>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>auto_awesome</span>
+<span class="font-inter tracking-[0.1em] text-[10px] sm:text-[11px] uppercase whitespace-nowrap">500+ Verified Manufacturers</span>
+</div>
+</div>
+</section>
+<!-- Waitlist Form Section -->
+<section class="bg-surface-container py-16 sm:py-24 lg:py-32">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-12 gap-8 lg:gap-12">
+<div class="col-span-12 lg:col-span-4 text-center lg:text-left mb-8 lg:mb-0">
+<h2 class="text-3xl sm:text-4xl font-black tracking-tighter text-primary mb-4 sm:mb-6 uppercase">Secure Your Position</h2>
+<p class="text-on-surface-variant mb-8 sm:mb-12 max-w-lg mx-auto lg:mx-0">Access is strictly controlled to maintain technical integrity and fulfillment speed. Join the cohort and get full one year of our $2,500 subscription completely free.</p>
+<div class="space-y-6 max-w-xs mx-auto lg:mx-0">
+<div class="status-card p-6 bg-white rounded-[12px] shadow-[0px_10px_30px_rgba(6,0,85,0.02)] text-left">
+<span class="text-primary block text-[10px] font-bold tracking-[0.1em] uppercase mb-2">Network Status</span>
+<div class="text-2xl font-black text-primary">92% Capacity</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 lg:col-start-6">
+<div class="form-card bg-white p-6 sm:p-10 lg:p-16 rounded-[12px] shadow-[0px_40px_80px_rgba(6,0,85,0.03)]">
+<form class="space-y-6 sm:space-y-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+<!-- New Country Field -->
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block">Country</label>
+<select class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors text-on-surface-variant text-sm font-medium">
+<option disabled="" selected="" value="">Select Country</option>
+<option value="United States">United States</option>
+<option value="Germany">Germany</option>
+<option value="Japan">Japan</option>
+<option value="India">India</option>
+<option value="China">China</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="South Korea">South Korea</option>
+<option value="Vietnam">Vietnam</option>
+<option value="Mexico">Mexico</option>
+<option value="Other">Other</option>
+</select>
+</div>
+<!-- New Product Domain Field -->
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block">Product Domain</label>
+<select class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors text-on-surface-variant text-sm font-medium">
+<option disabled="" selected="" value="">Select Domain</option>
+<option value="Textiles">Textiles</option>
+<option value="Agriculture">Agriculture</option>
+<option value="Jewellery">Jewellery</option>
+<option value="Engineering">Engineering</option>
+<option value="Pharma">Pharma</option>
+<option value="Leather">Leather</option>
+<option value="Packaged Foods">Packaged Foods</option>
+<option value="Electronics">Electronics</option>
+<option value="Construction">Construction</option>
+<option value="Plastics">Plastics</option>
+<option value="Minerals">Minerals</option>
+<option value="Handicrafts">Handicrafts</option>
+<option value="Wood Products">Wood Products</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block">Full Name</label>
+<input class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors placeholder:text-outline-variant/50" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block">Work Email</label>
+<input class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors placeholder:text-outline-variant/50" placeholder="john@company.industrial" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block">Company Name</label>
+<input class="w-full bg-[#F5F5F7] border-none rounded-[10px] px-4 py-3 focus:bg-[#EAEAEB] focus:ring-0 transition-colors placeholder:text-outline-variant/50" placeholder="Advanced Robotics Ltd." type="text"/>
+</div>
+<div class="space-y-4">
+<label class="text-[10px] font-bold uppercase tracking-[0.1em] text-outline block">Intent Profile</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label class="radio-option flex items-center gap-4 p-4 bg-[#F5F5F7] rounded-[10px] cursor-pointer hover:bg-[#EAEAEB] transition-colors group">
+<input class="text-[#0f00da] focus:ring-0" name="intent" type="radio"/>
+<span class="text-sm font-semibold text-on-surface-variant group-hover:text-primary transition-colors">Buyer</span>
+</label>
+<label class="radio-option flex items-center gap-4 p-4 bg-[#F5F5F7] rounded-[10px] cursor-pointer hover:bg-[#EAEAEB] transition-colors group">
+<input class="text-[#0f00da] focus:ring-0" name="intent" type="radio"/>
+<span class="text-sm font-semibold text-on-surface-variant group-hover:text-primary transition-colors">Manufacturer / Farmer</span>
+</label>
+</div>
+</div>
+<button class="w-full bg-[#0f00da] text-white py-4 rounded-full font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs hover:shadow-xl transition-all" type="submit">Submit Application</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Standardized Industrial Footer -->
+<footer class="bg-surface-container-low border-t border-surface-container py-16 lg:py-20">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+<div class="lg:col-span-4">
+<div class="flex items-center gap-2 mb-6">
+<img alt="Proquoment Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uguUXosTUwY8IKEneC9HGTM5q2EtTIbUcfP6AQeeFEnvqbFUeYdT3wMPoo5yhaA3qwm_-rRYNA2oBIP-s_F6G8P02sNzDVgZvRs-Mj6dtsvgN5cftmf2CnByNsW0oacqWiv9mvdOZfIr1RhUtOI7lzlwxIqHtOfvuL1H71Xbl-nJQfrYNp5eJOHA_tWScpimEaxAe098UuRbhtpCmp2cARZP1kzk9TQXv-SQ5FUA-WXJah3CzyBwWm7ti7NLR0XV2p3JXtkPtuAew"/>
+<span class="text-xl font-black tracking-tighter text-[#070099] font-headline">Proquoment</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed max-w-xs mb-8">
+                    Automated global sourcing for the next generation of industrial manufacturing. Built for precision.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">language</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-6">Platform</h4>
+<ul class="space-y-4">
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Materials R&amp;D</a></li>
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Supplier Network</a></li>
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Quality Control</a></li>
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Logistics</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-6">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Industrial Manifesto</a></li>
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Case Studies</a></li>
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-outline mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-surface-container flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs font-semibold text-outline uppercase tracking-widest">© 2026 PROQUOMENT. ALL RIGHTS RESERVED</p>
+<div class="flex items-center gap-6">
+<span class="text-[10px] font-black tracking-widest uppercase text-primary">Made for the Industrial Legacy</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('open-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+</script>
+</body></html>

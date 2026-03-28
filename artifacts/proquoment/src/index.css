@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: #f9f9f9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #454556;
+  --color-primary: #070099;
+  --color-primary-container: #0f00da;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #a0a4ff;
+  --color-primary-fixed: #e1e0ff;
+  --color-primary-fixed-dim: #bfc1ff;
+  --color-secondary: #0f00d9;
+  --color-secondary-container: #2c2cff;
+  --color-on-secondary: #ffffff;
+  --color-outline: #767588;
+  --color-outline-variant: #c6c4d9;
+  --color-on-background: #1a1c1c;
+}
+
+:root {
+  --background: #f9f9f9;
+  --foreground: #1a1c1c;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #1a1c1c;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glass-modal {
+  backdrop-filter: blur(12px);
+  background: rgba(15, 0, 218, 0.04);
+}
+
+.atmos-shadow {
+  box-shadow: 0px 20px 40px rgba(15, 0, 218, 0.04);
+}
+
+.halftone-texture {
+  background-image: radial-gradient(circle at center, #0f00da 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+
+.halftone-texture-dark {
+  background-image: radial-gradient(#060055 1px, transparent 0);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+
+.industrial-gradient {
+  background: linear-gradient(135deg, #060055 0%, #2d2dff 100%);
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, #070099 0%, #0f00da 100%);
+}
+
+#mobile-menu {
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+#mobile-menu.hidden-menu {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
