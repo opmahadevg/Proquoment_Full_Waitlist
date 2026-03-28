@@ -54,15 +54,17 @@ export default function Contact() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { icon: "share_reviews", label: "Professional", title: "LinkedIn" },
-                  { icon: "public", label: "Announcements", title: "Twitter" },
-                  { icon: "photo_camera", label: "Visual Log", title: "Instagram" },
-                  { icon: "video_library", label: "Resources", title: "YouTube" },
+                  { icon: "share_reviews", label: "Professional", title: "LinkedIn", href: "https://www.linkedin.com/company/proquoment/about/" },
+                  { icon: "public", label: "Announcements", title: "Twitter", href: "https://x.com/proquoment" },
+                  { icon: "photo_camera", label: "Visual Log", title: "Instagram", href: "https://www.instagram.com/proquoment/" },
+                  { icon: "video_library", label: "Resources", title: "YouTube", href: "https://www.youtube.com/@Proquoment" },
                 ].map((item) => (
                   <a
                     key={item.title}
                     className="group block p-8 bg-[#eeeeee] rounded-[10px] hover:bg-[#e8e8e8] transition-all duration-300"
-                    href="#"
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <span className="material-symbols-outlined text-3xl text-[#0f00d9]">{item.icon}</span>
@@ -73,13 +75,18 @@ export default function Contact() {
                   </a>
                 ))}
               </div>
-              <div className="mt-12 p-8 industrial-gradient rounded-[10px] text-white flex items-center justify-between cursor-pointer group hover:brightness-110 transition-all">
+              <a
+                href="https://calendly.com/rahull-goswamii2004"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-12 p-8 industrial-gradient rounded-[10px] text-white flex items-center justify-between group hover:brightness-110 transition-all"
+              >
                 <div>
                   <p className="text-xs uppercase tracking-widest font-bold opacity-80 mb-1">Immediate Assistance</p>
                   <p className="text-xl font-bold tracking-tight">Book a Call</p>
                 </div>
                 <span className="material-symbols-outlined text-3xl transition-transform group-hover:scale-110">bolt</span>
-              </div>
+              </a>
             </div>
           </section>
         </div>
