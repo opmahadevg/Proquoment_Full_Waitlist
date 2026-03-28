@@ -59,7 +59,7 @@ export default function Catalog() {
               <div className="relative rounded-lg overflow-hidden h-48 bg-slate-100">
                 <img
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhit0XMbo1_phlAGYW_DXBn1KEui_nkTd5H6l_5leUKMJUfp3pLsPkz8wMDJR2jZ1M-TxLzVfeyGsXRTqksyPwuWHGNleo4lDquN2HxndCF5YNi0gBS1A6HS1zILgvZdaJ7Dh0m6Yf4y_5DlrIfUh9zCDURCAjgDu3qaCk2JrPVPhDbS0wqVaaeaOm8DO-8zcnQ2YcZnFWDjmez5TG"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhit0XMbo1_phlAGYW_DXBn1KEui_nkTd5H6l_5leUKMJUfp3pLsPkz8wMDJR2jZ1M-TxLzVfeyGsXRTqksyPwuWHGNleo4lDquN2HxndCF5YNi0gBS1A6HS1zILgvZdaJ7Dh0m6Yf4y_5DlrIfUh9zCDURCAjgDu3qaCk2JrPVPhDbS0wqVaaeaOm8DO-8zcnQ2YcZnFWDjmez5TG2TnVXoD9i4Y9oXQiDNZHMQ9O5TnVVtmPXt6PNrgXfMjyX96VBOIptzyRjAN8"
                   alt="Assorted Indian spices and grains"
                 />
               </div>
@@ -83,7 +83,7 @@ export default function Catalog() {
             <div className="h-40 bg-slate-100 rounded-lg mb-6 overflow-hidden">
               <img
                 className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXZh79mVeGUgc_pLGg1xp3yfy4aoeC0fG6p0F_vCFED2QhqQ71Afmb9_HGLATU7vjw5kil6Iafd5c-IkqJpw7G8Xbrm1kxaCx2BqXn6knq0Igu6d2QipPJIlI5_pKefpLdLLLW5wfVl4eFlulRmnqh53OODz9gm19lEZPCO8k5xRzvx-8V9WHwAQyBSZz7F-leZJ9IO8GZbYAq9nLjlA0J-fOGJkO_ptyGm-9vc_Uo0xXfZuX3AUENRQ4cROjFyrDGBkSFQAL"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXZh79mVeGUgc_pLGg1xp3yfy4aoeC0fG6p0F_vCFED2QhqQ71Afmb9_HGLATU7vjw5kil6Iafd5c-IkqJpw7G8Xbrm1kxaCx2BqXn6knq0Igu6d2QipPJIlI5_pKefpLdLLLW5wfVl4eFlulRmnqh53OODz9gm19lEZPCO8k5xRzvx-8V9WHwAQyBSZz7F-leZJ9IO8GZbYAq9nLjlA0J-fOGJkO_ptyGm-9vc_Uo0xXfZuX3AUENRQ4cROjFyrDGBkSFQAL1TqJ-"
                 alt="Gold jewelry and diamonds"
               />
             </div>
