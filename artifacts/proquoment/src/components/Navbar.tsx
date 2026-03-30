@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 
-const LOGO_URL =
-  "https://lh3.googleusercontent.com/aida/ADBb0uguUXosTUwY8IKEneC9HGTM5q2EtTIbUcfP6AQeeFEnvqbFUeYdT3wMPoo5yhaA3qwm_-rRYNA2oBIP-s_F6G8P02sNzDVgZvRs-Mj6dtsvgN5cftmf2CnByNsW0oacqWiv9mvdOZfIr1RhUtOI7lzlwxIqHtOfvuL1H71Xbl-nJQfrYNp5eJOHA_tWScpimEaxAe098UuRbhtpCmp2cARZP1kzk9TQXv-SQ5FUA-WXJah3CzyBwWm7ti7NLR0XV2p3JXtkPtuAew";
+const LOGO_URL = "/Logo.png";
 
 const navLinks = [
   { label: "Platform", href: "/" },
