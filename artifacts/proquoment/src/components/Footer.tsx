@@ -1,5 +1,4 @@
-const LOGO_URL =
-  "/Logo.png";
+const LOGO_URL = "/Logo.png";
 
 export default function Footer() {
   return (
