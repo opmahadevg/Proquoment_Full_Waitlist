@@ -2,8 +2,7 @@ import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const LOGO_URL =
-  "/Logo.png";
+const LOGO_URL = "/Logo.png";
 
 export default function Platform() {
   return (
