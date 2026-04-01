@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -195,9 +196,9 @@ export default function Catalog() {
                 placeholder="e.g. Need 100MT of Grade A Turmeric from an FPO in Maharashtra..."
                 type="text"
               />
-              <button className="bg-[#0f00da] text-white p-3 rounded-full hover:scale-105 transition-transform">
+              <Link to="/waitlist" className="bg-[#0f00da] text-white p-3 rounded-full hover:scale-105 transition-transform flex items-center justify-center">
                 <span className="material-symbols-outlined">send</span>
-              </button>
+              </Link>
             </div>
           </div>
           <div className="absolute right-[-10%] bottom-[-20%] opacity-5 pointer-events-none">

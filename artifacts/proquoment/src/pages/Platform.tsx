@@ -353,9 +353,9 @@ export default function Platform() {
                 placeholder="Enter your business email"
                 type="email"
               />
-              <button className="w-full md:w-auto bg-white text-[#070099] px-8 lg:px-10 py-4 lg:py-5 rounded-full font-black text-sm lg:text-base whitespace-nowrap hover:bg-[#e1e0ff] transition-colors">
+              <Link to="/waitlist" className="w-full md:w-auto bg-white text-[#070099] px-8 lg:px-10 py-4 lg:py-5 rounded-full font-black text-sm lg:text-base whitespace-nowrap hover:bg-[#e1e0ff] transition-colors text-center">
                 Get Priority Access
-              </button>
+              </Link>
             </div>
           </div>
         </section>
