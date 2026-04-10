@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 
 const useCases = [
   {
@@ -145,7 +146,7 @@ export default function UseCases() {
             <div className="relative z-10">
               <Link href="/waitlist">
                 <button className="bg-white text-[#070099] px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-transform flex items-center gap-3">
-                  Join the Waitlist <span className="material-symbols-outlined">arrow_forward</span>
+                  Join the Waitlist <span translate="no" className="material-symbols-outlined">arrow_forward</span>
                 </button>
               </Link>
             </div>

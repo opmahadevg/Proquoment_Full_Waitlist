@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { supabase } from "@/lib/supabase";
+import Icon from "@/components/Icon";
 
 interface FormState {
   full_name: string;
@@ -102,7 +103,7 @@ export default function Waitlist() {
               We are building a closed-loop ecosystem for high-precision manufacturing. Proquoment connects elite industrial buyers with verified facilities through an AI-governed protocol.
             </p>
             <div className="flex items-center gap-2 text-[#070099] font-bold">
-              <span className="material-symbols-outlined">auto_awesome</span>
+              <span translate="no" className="material-symbols-outlined">auto_awesome</span>
               <span className="tracking-[0.1em] text-[10px] sm:text-[11px] uppercase whitespace-nowrap">500+ Verified Manufacturers</span>
             </div>
           </div>
@@ -131,7 +132,7 @@ export default function Waitlist() {
                 {success ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center gap-6">
                     <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-                      <span className="material-symbols-outlined text-green-600 text-3xl">check_circle</span>
+                      <span translate="no" className="material-symbols-outlined text-green-600 text-3xl">check_circle</span>
                     </div>
                     <h3 className="text-2xl font-black text-[#070099] tracking-tight">You're on the waitlist!</h3>
                     <p className="text-[#454556] max-w-sm">
@@ -237,7 +238,7 @@ export default function Waitlist() {
 
                     {error && (
                       <div className="flex items-center gap-3 px-4 py-3 bg-red-50 rounded-[10px] text-red-600 text-sm font-medium">
-                        <span className="material-symbols-outlined text-base">error</span>
+                        <span translate="no" className="material-symbols-outlined text-base">error</span>
                         {error}
                       </div>
                     )}
@@ -249,7 +250,7 @@ export default function Waitlist() {
                     >
                       {loading ? (
                         <>
-                          <span className="material-symbols-outlined text-sm animate-spin">progress_activity</span>
+                          <span translate="no" className="material-symbols-outlined text-sm animate-spin">progress_activity</span>
                           Submitting...
                         </>
                       ) : (

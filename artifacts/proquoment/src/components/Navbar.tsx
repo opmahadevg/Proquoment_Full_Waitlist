@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import Icon from "@/components/Icon";
 
 const LOGO_URL = "/Logo.png";
 
@@ -67,7 +68,7 @@ export default function Navbar({ activePage }: NavbarProps) {
             className="text-[#1a1c1c] focus:outline-none p-2"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <span className="material-symbols-outlined text-3xl">
+            <span translate="no" className="material-symbols-outlined text-3xl">
               {menuOpen ? "close" : "menu"}
             </span>
           </button>

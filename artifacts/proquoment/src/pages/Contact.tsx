@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 
 export default function Contact() {
   return (
@@ -22,7 +23,7 @@ export default function Contact() {
             <div className="space-y-12">
               <div className="flex items-start gap-6 group">
                 <div className="w-12 h-12 flex items-center justify-center bg-[#eeeeee] rounded-full text-[#0f00d9] transition-all group-hover:bg-[#0f00d9] group-hover:text-white">
-                  <span className="material-symbols-outlined">mail</span>
+                  <span translate="no" className="material-symbols-outlined">mail</span>
                 </div>
                 <div>
                   <p className="text-[0.65rem] font-bold tracking-[0.1em] uppercase text-[#464651] mb-1">Inquiries</p>
@@ -33,7 +34,7 @@ export default function Contact() {
               </div>
               <div className="flex items-start gap-6 group">
                 <div className="w-12 h-12 flex items-center justify-center bg-[#eeeeee] rounded-full text-[#0f00d9] transition-all group-hover:bg-[#0f00d9] group-hover:text-white">
-                  <span className="material-symbols-outlined">call</span>
+                  <span translate="no" className="material-symbols-outlined">call</span>
                 </div>
                 <div>
                   <p className="text-[0.65rem] font-bold tracking-[0.1em] uppercase text-[#464651] mb-1">24x7 Support Line</p>
@@ -67,8 +68,8 @@ export default function Contact() {
                     rel="noopener noreferrer"
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="material-symbols-outlined text-3xl text-[#0f00d9]">{item.icon}</span>
-                      <span className="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-[#0f00d9]">arrow_forward</span>
+                      <span translate="no" className="material-symbols-outlined text-3xl text-[#0f00d9]">{item.icon}</span>
+                      <span translate="no" className="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity text-[#0f00d9]">arrow_forward</span>
                     </div>
                     <p className="text-[0.7rem] font-bold tracking-widest uppercase text-[#464651] mb-1">{item.label}</p>
                     <p className="text-xl font-black text-[#060055]">{item.title}</p>
@@ -85,7 +86,7 @@ export default function Contact() {
                   <p className="text-xs uppercase tracking-widest font-bold opacity-80 mb-1">Immediate Assistance</p>
                   <p className="text-xl font-bold tracking-tight">Book a Call</p>
                 </div>
-                <span className="material-symbols-outlined text-3xl transition-transform group-hover:scale-110">bolt</span>
+                <span translate="no" className="material-symbols-outlined text-3xl transition-transform group-hover:scale-110">bolt</span>
               </a>
             </div>
           </section>

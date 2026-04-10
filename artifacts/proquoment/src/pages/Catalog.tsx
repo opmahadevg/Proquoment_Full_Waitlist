@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 
 export default function Catalog() {
   const [activeFilter, setActiveFilter] = useState("All Domains");
@@ -53,7 +54,7 @@ export default function Catalog() {
                 <span className="text-[10px] uppercase tracking-widest text-[#0f00da] font-bold mb-2 block">Direct from FPOs</span>
                 <h3 className="text-3xl font-black tracking-tight text-[#1a1c1c]">Agro & Farm Products</h3>
               </div>
-              <span className="material-symbols-outlined text-4xl text-[#0f00da] opacity-20 group-hover:opacity-100 transition-opacity">agriculture</span>
+              <span translate="no" className="material-symbols-outlined text-4xl text-[#0f00da] opacity-20 group-hover:opacity-100 transition-opacity">agriculture</span>
             </div>
             <div className="grid grid-cols-2 gap-8">
               <p className="text-slate-500 font-medium">Sourced straight from certified Farmers' Producer Organizations. Spices, pulses, high-grade grains, and seasonal produce.</p>
@@ -75,7 +76,7 @@ export default function Catalog() {
             </div>
             <p className="text-slate-500 font-medium mb-8">Premium fabrics, custom garments, and performance knitwear from vertically integrated units.</p>
             <div className="flex items-center gap-2 text-[#0f00da] font-bold text-sm">
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              <span translate="no" className="material-symbols-outlined text-sm">arrow_forward</span>
             </div>
           </div>
 
@@ -94,7 +95,7 @@ export default function Catalog() {
 
           {/* 4. Engineering */}
           <div className="md:col-span-4 bg-[#0f00da] text-white rounded-lg p-8 group cursor-pointer hover:scale-[1.02] transition-all">
-            <span className="material-symbols-outlined text-4xl mb-4">precision_manufacturing</span>
+            <span translate="no" className="material-symbols-outlined text-4xl mb-4">precision_manufacturing</span>
             <h3 className="text-2xl font-black tracking-tight mb-4">Engineering & Machinery</h3>
             <p className="text-[#e1e0ff]/80 font-medium text-sm leading-relaxed mb-6">Heavy-duty industrial machinery and precision engineering components forged in India's leading tech corridors.</p>
             <div className="w-12 h-1 bg-white/30 rounded-full"></div>
@@ -112,7 +113,7 @@ export default function Catalog() {
 
           {/* 6. Leather */}
           <div className="md:col-span-3 bg-white rounded-lg p-8 group cursor-pointer hover:[box-shadow:0px_20px_40px_rgba(15,0,218,0.04)] transition-all">
-            <span className="material-symbols-outlined text-slate-300 mb-4">shopping_bag</span>
+            <span translate="no" className="material-symbols-outlined text-slate-300 mb-4">shopping_bag</span>
             <h3 className="text-lg font-bold mb-2">Leather & Footwear</h3>
             <p className="text-sm text-slate-500 font-medium">Genuine leather shoes and lifestyle accessories from global export houses.</p>
           </div>
@@ -135,7 +136,7 @@ export default function Catalog() {
           {/* 8. Handicrafts */}
           <div className="md:col-span-3 bg-white rounded-lg p-8 group cursor-pointer hover:[box-shadow:0px_20px_40px_rgba(15,0,218,0.04)] transition-all text-center">
             <div className="w-16 h-16 bg-[#e8e8e8] rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="material-symbols-outlined text-[#0f00da]">brush</span>
+              <span translate="no" className="material-symbols-outlined text-[#0f00da]">brush</span>
             </div>
             <h3 className="text-lg font-bold mb-2">Handicrafts</h3>
             <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">Artisan Clusters</p>
@@ -154,13 +155,13 @@ export default function Catalog() {
           <div className="md:col-span-4 bg-white rounded-lg p-8 group cursor-pointer hover:[box-shadow:0px_20px_40px_rgba(15,0,218,0.04)] transition-all">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-xl font-bold">Minerals & Stones</h3>
-              <span className="material-symbols-outlined opacity-20">layers</span>
+              <span translate="no" className="material-symbols-outlined opacity-20">layers</span>
             </div>
             <p className="text-sm text-slate-500 font-medium">Direct quarry access for high-grade Granite, Marble, and industrial minerals.</p>
           </div>
           <div className="md:col-span-4 bg-white/50 border-2 border-[#0f00da]/5 rounded-lg p-8 group cursor-pointer hover:bg-white transition-all">
             <div className="flex items-center gap-2 text-[#0f00da] font-black text-xs uppercase tracking-widest mb-4">
-              <span className="material-symbols-outlined text-sm">star</span> Certified Pure
+              <span translate="no" className="material-symbols-outlined text-sm">star</span> Certified Pure
             </div>
             <h3 className="text-xl font-bold mb-2">Organic & Natural</h3>
             <p className="text-sm text-slate-500 font-medium">Purity-guaranteed organic spices and wellness products directly from sustainable farms.</p>
@@ -197,7 +198,7 @@ export default function Catalog() {
                 type="text"
               />
               <Link to="/waitlist" className="bg-[#0f00da] text-white p-3 rounded-full hover:scale-105 transition-transform flex items-center justify-center">
-                <span className="material-symbols-outlined">send</span>
+                <span translate="no" className="material-symbols-outlined">send</span>
               </Link>
             </div>
           </div>

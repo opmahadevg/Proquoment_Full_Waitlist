@@ -1,3 +1,5 @@
+import Icon from "@/components/Icon";
+
 const LOGO_URL = "/Logo.png";
 
 export default function Footer() {
@@ -15,10 +17,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full border border-[#c6c4d9] flex items-center justify-center text-[#1a1c1c] hover:bg-[#070099] hover:text-white hover:border-[#070099] transition-all cursor-pointer">
-                <span className="material-symbols-outlined text-sm">language</span>
+                <span translate="no" className="material-symbols-outlined text-sm">language</span>
               </div>
               <div className="w-10 h-10 rounded-full border border-[#c6c4d9] flex items-center justify-center text-[#1a1c1c] hover:bg-[#070099] hover:text-white hover:border-[#070099] transition-all cursor-pointer">
-                <span className="material-symbols-outlined text-sm">share</span>
+                <span translate="no" className="material-symbols-outlined text-sm">share</span>
               </div>
             </div>
           </div>

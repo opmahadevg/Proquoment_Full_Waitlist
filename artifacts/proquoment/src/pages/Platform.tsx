@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 
 const LOGO_URL = "/Logo.png";
 
@@ -44,7 +45,7 @@ export default function Platform() {
               <div className="bg-white p-6 lg:p-8 rounded-[10px] shadow-[0px_20px_40px_rgba(15,0,218,0.04)] relative">
                 <div className="flex justify-between items-center mb-6 lg:mb-8">
                   <h3 className="font-bold text-lg">Product Specification</h3>
-                  <span className="material-symbols-outlined text-[#070099]">settings</span>
+                  <span translate="no" className="material-symbols-outlined text-[#070099]">settings</span>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="rounded-lg overflow-hidden bg-[#f3f3f3] aspect-[4/5] relative group">
@@ -54,7 +55,7 @@ export default function Platform() {
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmiuBKXCr81TX2vZdf2mWIMPD_Xv9eBxa6Dp0JPEbiI-HY2cD07XJLr_XXuZO0h76ddspgASfNmxFahEck3wPvFJyTbuF-I73fL1FssY1cVPWLgw1WHtdo8ojBDSgBkFhAmIsnG_X3cCpDXzHyxFUEPHBKymrIzR7qgFaNbGtyDzjcGI9Bg9pcl8ZGaNi4okYkRCSk19neKdolu-EmO3zF8e6gQ3oA8UCyqkCrcJUWmeaHyIex6zcyItKkHebx6GCOceD7HI0kqpdT"
                     />
                     <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur p-3 rounded-lg flex items-center gap-2">
-                      <span className="material-symbols-outlined text-[#070099] text-sm">verified</span>
+                      <span translate="no" className="material-symbols-outlined text-[#070099] text-sm">verified</span>
                       <span className="text-[10px] font-bold tracking-tight uppercase">V1 TECHNICAL SHELL</span>
                     </div>
                   </div>
@@ -63,26 +64,26 @@ export default function Platform() {
                       <p className="text-[10px] uppercase tracking-widest text-[#767588] mb-1 lg:mb-2 font-bold">Primary Material</p>
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-sm lg:text-base">Gore-Tex Pro</span>
-                        <span className="material-symbols-outlined text-xs text-[#070099]">check_circle</span>
+                        <span translate="no" className="material-symbols-outlined text-xs text-[#070099]">check_circle</span>
                       </div>
                     </div>
                     <div className="p-4 bg-[#f3f3f3] rounded-lg">
                       <p className="text-[10px] uppercase tracking-widest text-[#767588] mb-1 lg:mb-2 font-bold">Coating</p>
                       <div className="flex items-center justify-between text-[#454556]">
                         <span className="font-medium text-sm lg:text-base">DWR Finish</span>
-                        <span className="material-symbols-outlined text-xs">add</span>
+                        <span translate="no" className="material-symbols-outlined text-xs">add</span>
                       </div>
                     </div>
                     <div className="p-4 bg-[#f3f3f3] rounded-lg">
                       <p className="text-[10px] uppercase tracking-widest text-[#767588] mb-1 lg:mb-2 font-bold">Seams</p>
                       <div className="flex items-center justify-between text-[#454556]">
                         <span className="font-medium text-sm lg:text-base">Heat Taped</span>
-                        <span className="material-symbols-outlined text-xs">add</span>
+                        <span translate="no" className="material-symbols-outlined text-xs">add</span>
                       </div>
                     </div>
                     <div className="mt-auto bg-[#0f00da] p-4 rounded-lg text-white flex justify-between items-center cursor-pointer">
                       <span className="font-bold text-sm lg:text-base">Generate BOM</span>
-                      <span className="material-symbols-outlined">arrow_forward</span>
+                      <span translate="no" className="material-symbols-outlined">arrow_forward</span>
                     </div>
                   </div>
                 </div>
@@ -98,7 +99,7 @@ export default function Platform() {
               <div className="bg-white rounded-[10px] overflow-hidden shadow-[0px_20px_40px_rgba(15,0,218,0.04)]">
                 <div className="p-4 lg:p-6 bg-white border-b border-[#eeeeee] flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-[#070099] flex items-center justify-center text-white">
-                    <span className="material-symbols-outlined text-sm">bolt</span>
+                    <span translate="no" className="material-symbols-outlined text-sm">bolt</span>
                   </div>
                   <span className="font-bold tracking-tight text-sm lg:text-base">Proquoment AI</span>
                 </div>
@@ -130,7 +131,7 @@ export default function Platform() {
                   </div>
                   <div className="flex gap-4 max-w-[95%] lg:max-w-[85%] items-start">
                     <div className="bg-[#eeeeee] p-4 lg:p-6 rounded-2xl rounded-tl-none flex items-center gap-3 lg:gap-4">
-                      <span className="material-symbols-outlined text-[#070099] animate-pulse text-sm lg:text-base">auto_awesome</span>
+                      <span translate="no" className="material-symbols-outlined text-[#070099] animate-pulse text-sm lg:text-base">auto_awesome</span>
                       <div className="text-xs lg:text-base leading-relaxed text-[#070099] font-medium italic">
                         Analyzing manufacturing hubs in Tirupur for polyester fill availability...
                       </div>
@@ -152,14 +153,14 @@ export default function Platform() {
               </p>
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-[#070099] mt-1">check_circle</span>
+                  <span translate="no" className="material-symbols-outlined text-[#070099] mt-1">check_circle</span>
                   <div>
                     <h4 className="font-bold text-sm lg:text-base">Automated Specification Translation</h4>
                     <p className="text-xs lg:text-sm text-[#767588] mt-1">Precise conversion of technical requirements for international factories.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-[#070099] mt-1">check_circle</span>
+                  <span translate="no" className="material-symbols-outlined text-[#070099] mt-1">check_circle</span>
                   <div>
                     <h4 className="font-bold text-sm lg:text-base">Real-time Supply Chain Feedback</h4>
                     <p className="text-xs lg:text-sm text-[#767588] mt-1">Get immediate insight on material availability and current tariff impacts.</p>
@@ -188,7 +189,7 @@ export default function Platform() {
                   <h3 className="text-lg lg:text-xl font-bold mb-2">Blue Canvas Jacket</h3>
                   <p className="text-xs lg:text-sm text-[#767588] mb-4 lg:mb-6">Heavyweight industrial grade cotton canvas with reinforced stitching.</p>
                   <div className="flex items-center gap-2 px-3 py-1 bg-[#070099]/10 text-[#070099] rounded-full w-fit">
-                    <span className="material-symbols-outlined text-[10px] lg:text-xs">star</span>
+                    <span translate="no" className="material-symbols-outlined text-[10px] lg:text-xs">star</span>
                     <span className="text-[8px] lg:text-[10px] font-bold uppercase tracking-widest">Top Pick Recommendation</span>
                   </div>
                 </div>
@@ -266,7 +267,7 @@ export default function Platform() {
                 ].map((step) => (
                   <div key={step.title} className="flex flex-col items-center md:items-start text-center md:text-left bg-white md:bg-transparent p-6 md:p-0 rounded-xl md:rounded-none shadow-sm md:shadow-none">
                     <div className={`w-12 h-12 rounded-full ${step.color} text-white flex items-center justify-center mb-4 lg:mb-6 ring-8 ring-[#f9f9f9]`}>
-                      <span className="material-symbols-outlined text-xl">{step.icon}</span>
+                      <span translate="no" className="material-symbols-outlined text-xl">{step.icon}</span>
                     </div>
                     <h4 className="font-bold text-base lg:text-lg mb-1 lg:mb-2">{step.title}</h4>
                     <p className="text-xs lg:text-sm text-[#767588] leading-relaxed">{step.desc}</p>
@@ -295,7 +296,7 @@ export default function Platform() {
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-4 lg:gap-6 group">
                     <div className="w-10 lg:w-12 h-10 lg:h-12 flex items-center justify-center rounded-full bg-[#eeeeee] group-hover:bg-[#0f00da] group-hover:text-white transition-colors">
-                      <span className="material-symbols-outlined text-sm lg:text-base">{item.icon}</span>
+                      <span translate="no" className="material-symbols-outlined text-sm lg:text-base">{item.icon}</span>
                     </div>
                     <p className="font-bold text-sm lg:text-base">{item.label}</p>
                   </div>
@@ -326,7 +327,7 @@ export default function Platform() {
                   </div>
                 </div>
                 <button className="w-full bg-[#0f00da] text-white py-4 lg:py-6 rounded-full font-black text-base lg:text-lg shadow-xl hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 lg:gap-3">
-                  <span className="material-symbols-outlined text-sm lg:text-base">shopping_cart</span>
+                  <span translate="no" className="material-symbols-outlined text-sm lg:text-base">shopping_cart</span>
                   Buy sample for $149.00
                 </button>
               </div>
